@@ -1,8 +1,19 @@
 .carousel-item>img
 {
-        height: 50vh !important;
-        width: 70vw;
+        height: 60vh !important;
+        width: 75vw;
 }
+
+input[type=searchText] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=searchText]:focus {
+    width: 100%;
+  }
 
 /* Code to Style Comment Function in Home Page */
 :root {
