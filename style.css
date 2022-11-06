@@ -4,9 +4,15 @@
 }
 
 /* Code to Style Comment Function in Home Page */
+:root {
+        --red: rgb(209, 3, 3);
+        --white: #fff;
+        --black: #000;
+    }
+
 body {
-        background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
-    
+        font-family: "Helvetica";
+        background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;   
     }
     #comment-box, #post {
         border: none;
@@ -14,4 +20,117 @@ body {
     }
     #post:hover{
         background-color: deeppink;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .wrapper {
+        max-width: 600px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .project-header {
+        position: absolute;
+        top: 0;
+        background: rgb(170, 52, 109);
+        background: linear-gradient(90deg, rgba(180,58,116,1) 0%, rgba(253,29,29,1) 50%, rgba(252,139,69,1) 100%);    width: 100%;
+        text-align: center;
+        color: var(--white);
+    }
+    
+    /* ===== Project CSS ===== */
+    .btn {
+        width: 200px; height: 88px;
+        outline: 0;
+        border: 2px solid #ccc;
+        color: #000;
+        cursor: pointer;
+        overflow: hidden;
+        position: relative;
+        display:flex;
+        justify-content: space-between;
+        box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.05);
+        transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+    }
+    
+    .btn:hover {
+        box-shadow: 0px 3px 25px rgba(0, 0, 0, 0.2);
+        border-color: var(--red);
+    }
+    
+    .btn-like {
+        padding: 1.5rem 1.5rem 1.5rem 6rem;
+        font-size: 2rem;
+        border-radius: 10px;
+        background: #fff;
+        transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+    }
+    .btn-like.liked {
+        background: var(--red);
+        border-color: var(--red);
+    }
+    
+    /*-- Button Icon -- */
+    .btn-icon {
+        display: inline-block;
+        width: 32px;
+        height: 36px;
+        position: absolute;
+        left: 1.5rem;
+        transition: 1s cubic-bezier(.21,.04,.26,.99);
+        transform: rotate(0deg)
+    }
+    .btn:hover .btn-icon {
+        color: var(--red);
+    }
+    .btn.liked:hover .btn-icon {
+        color: var(--black);
+    }
+    .liked .btn--icon-default {
+        transform: rotate(-90deg)
+    }
+    .btn:not(.liked).btn--icon-liked {
+        transform: rotate(-90deg)
+    }
+    .liked .btn--icon-default,
+    .btn--icon-liked {
+        opacity: 0;
+        color: #fff;
+        position: absolute;
+    }
+    .btn--icon-default,
+    .liked .btn--icon-liked {
+        opacity: 1;
+        left: 1.5rem;
+    }
+    
+    /*-- Button Content -- */
+    .btn-content {
+        transition: transform 0.1s ease;
+        display: inline-block;
+        /* position: absolute;
+        right: 0; */
+    }
+    .liked .btn-content {
+        color: var(--white);
+    }
+    .btn:hover.liked .btn-content {
+        color: var(--black);
+    }
+    .btn:not(.liked) .btn-content--liked {
+        transform: translate(110px)
+    }
+    .btn:not(.liked) .btn-content--default {
+        transform: translate(-56px)
+    }
+    .liked .btn-content--default {
+        transform: translate(24px)
     }
