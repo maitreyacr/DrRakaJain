@@ -1,6 +1,7 @@
 .carousel-item>img
 {
-        height: 70vh !important;
+        height: 50vh !important;
+        width: 70vw;
 }
 
 /* Code to Style Comment Function in Home Page */
