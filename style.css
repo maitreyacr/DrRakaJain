@@ -2,3 +2,16 @@
 {
         height: 70vh !important;
 }
+
+/* Code to Style Comment Function in Home Page */
+body {
+        background: dodgerblue linear-gradient(45deg, aqua, dodgerblue, deeppink) fixed;
+    
+    }
+    #comment-box, #post {
+        border: none;
+        border-radius: 5px;
+    }
+    #post:hover{
+        background-color: deeppink;
+    }
